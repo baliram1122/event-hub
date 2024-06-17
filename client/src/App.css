@@ -419,7 +419,7 @@ div.loader-container {
   letter-spacing: 2px;
   line-height: 80%;
   color: transparent; 
-  background-image: url('C:\Users\Tanmay Naik\Videos\event-hub\client\public\images\giphy.gif');
+/*   background-image: url('C:\Users\Tanmay Naik\Videos\event-hub\client\public\images\giphy.gif'); */
   background-size: cover;
   -webkit-background-clip: text; 
   background-clip: text; 
