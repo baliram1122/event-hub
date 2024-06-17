@@ -87,14 +87,28 @@ export const getEvent = async (req, res, next) => {
     }
 }
 
+// export const getAllEvent = async (req, res, next) => {
+//     try {
+//         const events = await Event.find();
+//         res.status(200).json(events);
+//     } catch (err) {
+//         next(err)
+//     }
+// }
+
+const eventsStorage = [];
 export const getAllEvent = async (req, res, next) => {
     try {
-        const events = await Event.find();
-        res.status(200).json(events);
+        if (eventsStorage.length === 0) {
+            const events = await Event.find();
+            eventsStorage.push(...events);
+        } 
+        res.status(200).json(...eventsStorage);
     } catch (err) {
-        next(err)
+        next(err);
     }
 }
+
 
 
 // comments
